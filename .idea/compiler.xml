@@ -22,11 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="elephant_web" />
+        <module name="web_ssm" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="elephant_web" target="1.5" />
+      <module name="web_ssm" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
