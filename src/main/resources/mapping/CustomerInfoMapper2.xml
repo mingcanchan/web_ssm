@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.elephant.dao.ICustomerInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.elephant.model.CustomerInfo" >
+    <id column="sn" property="sn" jdbcType="BIGINT" />
+    <result column="cust_type" property="custType" jdbcType="SMALLINT" />
+    <result column="customer_id" property="customerId" jdbcType="VARCHAR" />
+    <result column="customer_pwd" property="customerPwd" jdbcType="VARCHAR" />
+    <result column="customer_name" property="customerName" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="mobile" property="mobile" jdbcType="VARCHAR" />
+    <result column="audit_status" property="auditStatus" jdbcType="SMALLINT" />
+    <result column="activation" property="activation" jdbcType="SMALLINT" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="pay_type" property="payType" jdbcType="INTEGER" />
+    <result column="charge_type" property="chargeType" jdbcType="INTEGER" />
+    <result column="finance_id" property="financeId" jdbcType="VARCHAR" />
+    <result column="insert_time" property="insertTime" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    sn, cust_type, customer_id, customer_pwd, customer_name, email, phone, mobile, audit_status, 
+    activation, status, pay_type, charge_type, finance_id, insert_time, update_time
+  </sql>
+  <select id="selectCustomerList" resultMap="BaseResultMap" parameterType="com.elephant.model.CustomerInfo">
+  	SELECT * FROM customer_info
+  
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from customer_info
+    where sn = #{sn,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from customer_info
+    where sn = #{sn,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.elephant.model.CustomerInfo" >
+    insert into customer_info (sn, cust_type, customer_id, 
+      customer_pwd, customer_name, email, 
+      phone, mobile, audit_status, 
+      activation, status, pay_type, 
+      charge_type, finance_id, insert_time, 
+      update_time)
+    values (#{sn,jdbcType=BIGINT}, #{custType,jdbcType=SMALLINT}, #{customerId,jdbcType=VARCHAR}, 
+      #{customerPwd,jdbcType=VARCHAR}, #{customerName,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR}, #{auditStatus,jdbcType=SMALLINT}, 
+      #{activation,jdbcType=SMALLINT}, #{status,jdbcType=INTEGER}, #{payType,jdbcType=INTEGER}, 
+      #{chargeType,jdbcType=INTEGER}, #{financeId,jdbcType=VARCHAR}, #{insertTime,jdbcType=VARCHAR}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.elephant.model.CustomerInfo" >
+    insert into customer_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="sn != null" >
+        sn,
+      </if>
+      <if test="custType != null" >
+        cust_type,
+      </if>
+      <if test="customerId != null" >
+        customer_id,
+      </if>
+      <if test="customerPwd != null" >
+        customer_pwd,
+      </if>
+      <if test="customerName != null" >
+        customer_name,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="mobile != null" >
+        mobile,
+      </if>
+      <if test="auditStatus != null" >
+        audit_status,
+      </if>
+      <if test="activation != null" >
+        activation,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="payType != null" >
+        pay_type,
+      </if>
+      <if test="chargeType != null" >
+        charge_type,
+      </if>
+      <if test="financeId != null" >
+        finance_id,
+      </if>
+      <if test="insertTime != null" >
+        insert_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="sn != null" >
+        #{sn,jdbcType=BIGINT},
+      </if>
+      <if test="custType != null" >
+        #{custType,jdbcType=SMALLINT},
+      </if>
+      <if test="customerId != null" >
+        #{customerId,jdbcType=VARCHAR},
+      </if>
+      <if test="customerPwd != null" >
+        #{customerPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="customerName != null" >
+        #{customerName,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null" >
+        #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="auditStatus != null" >
+        #{auditStatus,jdbcType=SMALLINT},
+      </if>
+      <if test="activation != null" >
+        #{activation,jdbcType=SMALLINT},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="payType != null" >
+        #{payType,jdbcType=INTEGER},
+      </if>
+      <if test="chargeType != null" >
+        #{chargeType,jdbcType=INTEGER},
+      </if>
+      <if test="financeId != null" >
+        #{financeId,jdbcType=VARCHAR},
+      </if>
+      <if test="insertTime != null" >
+        #{insertTime,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.elephant.model.CustomerInfo" >
+    update customer_info
+    <set >
+      <if test="custType != null" >
+        cust_type = #{custType,jdbcType=SMALLINT},
+      </if>
+      <if test="customerId != null" >
+        customer_id = #{customerId,jdbcType=VARCHAR},
+      </if>
+      <if test="customerPwd != null" >
+        customer_pwd = #{customerPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="customerName != null" >
+        customer_name = #{customerName,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null" >
+        mobile = #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="auditStatus != null" >
+        audit_status = #{auditStatus,jdbcType=SMALLINT},
+      </if>
+      <if test="activation != null" >
+        activation = #{activation,jdbcType=SMALLINT},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="payType != null" >
+        pay_type = #{payType,jdbcType=INTEGER},
+      </if>
+      <if test="chargeType != null" >
+        charge_type = #{chargeType,jdbcType=INTEGER},
+      </if>
+      <if test="financeId != null" >
+        finance_id = #{financeId,jdbcType=VARCHAR},
+      </if>
+      <if test="insertTime != null" >
+        insert_time = #{insertTime,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where sn = #{sn,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.elephant.model.CustomerInfo" >
+    update customer_info
+    set cust_type = #{custType,jdbcType=SMALLINT},
+      customer_id = #{customerId,jdbcType=VARCHAR},
+      customer_pwd = #{customerPwd,jdbcType=VARCHAR},
+      customer_name = #{customerName,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      mobile = #{mobile,jdbcType=VARCHAR},
+      audit_status = #{auditStatus,jdbcType=SMALLINT},
+      activation = #{activation,jdbcType=SMALLINT},
+      status = #{status,jdbcType=INTEGER},
+      pay_type = #{payType,jdbcType=INTEGER},
+      charge_type = #{chargeType,jdbcType=INTEGER},
+      finance_id = #{financeId,jdbcType=VARCHAR},
+      insert_time = #{insertTime,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where sn = #{sn,jdbcType=BIGINT}
+  </update>
+</mapper>
