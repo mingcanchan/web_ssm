@@ -1,4 +1,4 @@
-package com.elephant.model;
+package com.ming.model;
 
 public class ChartsData {
 	

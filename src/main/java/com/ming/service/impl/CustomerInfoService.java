@@ -1,13 +1,13 @@
-package com.elephant.service.impl;
+package com.ming.service.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.elephant.dao.ICustomerInfoMapper;
-import com.elephant.model.CustomerInfo;
-import com.elephant.service.ICustomerInfoService;
+import com.ming.dao.ICustomerInfoMapper;
+import com.ming.model.CustomerInfo;
+import com.ming.service.ICustomerInfoService;
 
 @Service
 public class CustomerInfoService implements ICustomerInfoService {

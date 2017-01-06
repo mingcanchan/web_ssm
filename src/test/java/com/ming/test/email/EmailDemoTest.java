@@ -1,4 +1,4 @@
-package com.elephant.test.email;
+package com.ming.test.email;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;

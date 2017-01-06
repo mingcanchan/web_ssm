@@ -1,4 +1,4 @@
-package com.elephant.controller;
+package com.ming.controller;
 
 import java.util.Set;
 import javax.validation.ConstraintViolation;
@@ -9,7 +9,7 @@ import javax.validation.ValidatorFactory;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.elephant.model.Car;
+import com.ming.model.Car;
 
 import static org.junit.Assert.assertEquals;
 

@@ -1,4 +1,4 @@
-package com.elephant.test.email;
+package com.ming.test.email;
 public class User {
 private String username;
 private String password;

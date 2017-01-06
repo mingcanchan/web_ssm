@@ -1,4 +1,4 @@
-package com.elephant.test.email;
+package com.ming.test.email;
 
 import org.junit.Test;
 import org.springframework.mail.SimpleMailMessage;

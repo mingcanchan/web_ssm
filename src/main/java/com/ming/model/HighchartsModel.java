@@ -1,4 +1,4 @@
-package com.elephant.model;
+package com.ming.model;
 
 import java.util.List;
 

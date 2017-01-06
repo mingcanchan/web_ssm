@@ -1,4 +1,4 @@
-package com.elephant.interceptor;
+package com.ming.interceptor;
 
 import static org.apache.ibatis.jdbc.SqlBuilder.BEGIN;
 import static org.apache.ibatis.jdbc.SqlBuilder.DELETE_FROM;

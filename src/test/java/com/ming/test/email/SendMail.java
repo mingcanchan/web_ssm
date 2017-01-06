@@ -1,4 +1,4 @@
-package com.elephant.test.email;
+package com.ming.test.email;
 
 import java.util.Date;
 import java.util.Properties;

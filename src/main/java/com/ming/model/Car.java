@@ -1,4 +1,4 @@
-package com.elephant.model;
+package com.ming.model;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;

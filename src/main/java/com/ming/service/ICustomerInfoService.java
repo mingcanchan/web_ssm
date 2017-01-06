@@ -1,8 +1,8 @@
-package com.elephant.service;
+package com.ming.service;
 
 import java.util.List;
 
-import com.elephant.model.CustomerInfo;
+import com.ming.model.CustomerInfo;
 
 public interface ICustomerInfoService {
 

@@ -32,7 +32,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
             <property name="returnPageInfo" value="check"/>  
         </plugin>  
         
-        <plugin interceptor="com.elephant.interceptor.MapperInterceptor">
+        <plugin interceptor="com.ming.interceptor.MapperInterceptor">
 		    <!--================================================-->
 		    <!--可配置参数说明(一般无需修改)-->
 		    <!--================================================-->
@@ -48,7 +48,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		    <!--主键自增回写方法执行顺序,默认AFTER,可选值为(BEFORE|AFTER)-->
 		    <!--<property name="ORDER" value="AFTER"/>-->
 		    <!--通用Mapper接口，多个通用接口用逗号隔开-->
-		    <property name="mappers" value="com.elephant.interceptor.BaseMapper"/>
+		    <property name="mappers" value="com.ming.interceptor.BaseMapper"/>
 		</plugin>
     </plugins>  
 </configuration> 

@@ -1,4 +1,4 @@
-package com.elephant.controller;
+package com.ming.controller;
 
 import java.io.File;
 import java.io.FileInputStream;

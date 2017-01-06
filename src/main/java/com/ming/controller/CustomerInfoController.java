@@ -1,4 +1,4 @@
-package com.elephant.controller;
+package com.ming.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.alibaba.fastjson.JSON;
-import com.elephant.model.ChartsData;
-import com.elephant.model.CustomerInfo;
-import com.elephant.model.HighchartsModel;
-import com.elephant.service.ICustomerInfoService;
+import com.ming.model.ChartsData;
+import com.ming.model.CustomerInfo;
+import com.ming.model.HighchartsModel;
+import com.ming.service.ICustomerInfoService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 

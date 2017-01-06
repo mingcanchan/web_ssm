@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-package com.elephant.interceptor;
+package com.ming.interceptor;
 
 import org.apache.ibatis.builder.annotation.ProviderSqlSource;
 import org.apache.ibatis.executor.Executor;
