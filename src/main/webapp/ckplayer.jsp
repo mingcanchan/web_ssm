@@ -9,13 +9,26 @@
 <html>
 <head>
     <title>ckplayer</title>
-
+    <script type="text/javascript" src="js/ckplayer/ckplayer.js"></script>
 
 </head>
 <body>
-<div id="a1"></div>
-<script type="text/javascript" src="js/ckplayer/ckplayer.js" charset="utf-8"></script>
-<script type="text/javascript">  var flashvars={    f:'http://movie.ks.js.cn/flv/other/1_0.mp4',    c:0,    loaded:'loadedHandler'  };  var video=['http://movie.ks.js.cn/flv/other/1_0.mp4->video/mp4'];  CKobject.embed('ckplayer/ckplayer.swf','a1','ckplayer_a1','600','400',false,flashvars,video);</script>
+    <div id="a1"></div>
+    <div id="nowTime"></div>
+    <script type="text/javascript">
+        var flashvars={
+            f:'video/zz.mp4',
+            c:0,
+          //  p:1,
+          //  l:'http://k.ctsywy.com/xml/ckplayer_4417_20150206.swf',
+         //   t:15,
+        //    b:1,
+         //   i:'/static/images/letitgo.jpg',
+            my_url:encodeURIComponent(window.location.href)
+        };
+        var video=['video/zz.mp4'];
+        CKobject.embed('js/ckplayer/ckplayer.swf','a1','ckplayer_a1','80%','80%',false,flashvars,video);
+    </script>
 
 </body>
 </html>
