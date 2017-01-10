@@ -1,18 +1,5 @@
 package com.ming.controller;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +9,14 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/file")
@@ -68,10 +63,8 @@ public class MyFileUploadController {
 				FileOutputStream fileOutputStream;
 				try {
 					fileOutputStream = new FileOutputStream(new File("D://" + entity.getValue().getOriginalFilename()));
-
 					String url = "c://" + entity.getValue().getOriginalFilename();
 					String fileName = entity.getValue().getOriginalFilename();
-
 					byte byttfer[] = new byte[1024];
 					int c = -1;
 					while ((c = stream.read(byttfer)) != -1) {
@@ -100,9 +93,8 @@ public class MyFileUploadController {
                     //拿到输出流，同时重命名上传的文件  
                     FileOutputStream os = new FileOutputStream("D:/" + new Date().getTime() + files[i].getOriginalFilename());  
                     //拿到上传文件的输入流  
-                    FileInputStream in = (FileInputStream) files[i].getInputStream();  
-                      
-                    //以写字节的方式写文件  
+                    FileInputStream in = (FileInputStream) files[i].getInputStream();
+					//以写字节的方式写文件
                     int b = 0;  
                     while((b=in.read()) != -1){  
                         os.write(b);  
