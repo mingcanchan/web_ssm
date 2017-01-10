@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0764fd0-79a3-4959-a798-fbf3db17daec" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/web_ssm_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/web_ssm_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ming/controller/MyFileUploadController.java" afterPath="$PROJECT_DIR$/src/main/java/com/ming/controller/MyFileUploadController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring-mybatis.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-mybatis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web_ssm.iml" afterPath="$PROJECT_DIR$/web_ssm.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -89,9 +83,11 @@
       <file leaf-file-name="MyFileUploadController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ming/controller/MyFileUploadController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1348">
-              <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-              <folding />
+            <state relative-caret-position="287">
+              <caret line="116" column="0" lean-forward="true" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -874,7 +870,7 @@
       <updated>1483722873231</updated>
       <workItem from="1483722877939" duration="1453000" />
       <workItem from="1483929998439" duration="10569000" />
-      <workItem from="1483964485812" duration="5182000" />
+      <workItem from="1483964485812" duration="5252000" />
     </task>
     <task id="LOCAL-00001" summary="删除无效iml文件">
       <created>1483723325368</created>
@@ -904,11 +900,18 @@
       <option name="project" value="LOCAL" />
       <updated>1483930233618</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="优化import">
+      <created>1484058767385</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1484058767385</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17204000" />
+    <option name="totallyTimeSpent" value="17274000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="733" extended-state="6" />
@@ -990,7 +993,8 @@
     <MESSAGE value="删除无效iml文件" />
     <MESSAGE value="修改数据库" />
     <MESSAGE value="去除多余的约束" />
-    <option name="LAST_COMMIT_MESSAGE" value="去除多余的约束" />
+    <MESSAGE value="优化import" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化import" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1332,9 +1336,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ming/controller/MyFileUploadController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1348">
-          <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="287">
+          <caret line="116" column="0" lean-forward="true" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
