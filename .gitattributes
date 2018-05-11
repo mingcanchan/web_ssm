@@ -1,1 +1,6 @@
-src=java
+*.css linguist-language=html
+*.less linguist-language=html
+*.js linguist-language=html
+*.html linguist-language=html
+*.java linguist-language=java
+*.class linguist-language=java
